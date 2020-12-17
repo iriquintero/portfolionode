@@ -1,0 +1,30 @@
+<section class="container p-4">
+    <div class="row">
+        <div class="col-md4 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">Login</h2>
+                    <p class="text-center">Introducir usuario y contraseña</p>
+                </div>
+                <div class="card-body">
+                    <form action="/admin/login" method="post">
+                        <div class="form-group">
+                            <label for="usuario">Usuario</label>
+                            <input type="text" class="form-control" id="usuario" aria-describedby="usuario" name="usuario">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="contraseña">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                    </form>
+                </div>
+                {{#if error}}
+                <div class="alert alert-dark" role="alert">
+                    Usuario o contraseña incorrecta
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>
