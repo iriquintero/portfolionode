@@ -56,22 +56,21 @@
                         <ul class="icons">
                             <li class="boton icon-react"><h4>React.js</h4></li>
                             <li class="boton icon-bootstrap"><h4>Bootstrap</h4></li>
-                            <li class="boton icon-adobephotoshop"><h4>Photoshop</h4></li>
-                            <li class="boton icon-adobeillustrator"><h4>Illustrator</h4></li>
-                        </ul>
-                    </div>
-                    <div class="carousel-item">
-                        <ul class="icons">
                             <li class="boton icon-jquery"><h4>Jquery</h4></li>
                             <li class="boton icon-node-dot-js"><h4>Node.js</h4></li>
-                            <li class="boton icon-postgresql"><h4>SQL</h4></li>
-                            <li class="boton icon-sass"><h4>Sass</h4></li>
                         </ul>
                     </div>
                     <div class="carousel-item">
                         <ul class="icons">
                             <li class="boton icon-database"><h4>Base de Datos</h4></li>
                             <li class="boton icon-mysql"><h4>MySQL</h4></li>
+                            <li class="boton icon-postgresql"><h4>SQL</h4></li>
+                        </ul>
+                    </div>
+                    <div class="carousel-item">
+                        <ul class="icons">
+                            <li class="boton icon-adobephotoshop"><h4>Photoshop</h4></li>
+                            <li class="boton icon-adobeillustrator"><h4>Illustrator</h4></li>
                         </ul>
                     </div>
                 </div>
@@ -174,22 +173,23 @@
                 <div class="card infocont icon-phone"><p>+54-11-45345233</p></div>
                 <div class="card infocont icon-envelop "><p>iriangel.quintero@gmail.com</p></div>
             </div>
-            <form class="form-contacto">
+            <form class="form-contacto" action="#contacto" method="post">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label class="textlabel" for="inputnombre">Nombre y Apellido:</label>
-                        <input type="text" class="form-control" id="inputnombre" required placeholder="Escribir tú Nombre y Apellido">
+                        <input type="text" class="form-control" id="inputnombre" name="nombre" required placeholder="Escribir tú Nombre y Apellido">
                     </div>
                     <div class="form-group col-md-6">
                         <label class="textlabel" for="inputEmail4">E-mail:</label>
-                        <input type="email" class="form-control" id="inputEmail4" required placeholder="ejemplo@gmail.com">
+                        <input type="email" class="form-control" id="inputEmail4" name="email" required placeholder="ejemplo@gmail.com">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="textlabel" for="exampleFormControlTextarea1">Mensaje:</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required placeholder="Escribir un mensaje"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje" required placeholder="Escribir un mensaje"></textarea>
                 </div>
                 <button type="submit" class="enviar btn btn-color btn-md">Enviar</button>
+                <p class="mensajecontact">{{mensaje}}</p>
             </form>
             <div class="flecha">
                 <a class="flechaicon icon-arrow-up2" href="#inicio"></a>
