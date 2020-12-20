@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var fileupload = require('express-fileupload');
+var favicon = require('serve-favicon');
 
 require('dotenv').config();
 
@@ -24,11 +25,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(fileupload());
 
 app.use(session({
   secret:'clavedificil',
-  cookie:{maxAge:null},
+  cookie:{maxAge:2592000000},
   resave:false,
   saveUninitialized:true
 }));
