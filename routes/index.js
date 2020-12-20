@@ -1,10 +1,14 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
+var portfolioModel = require('../models/portfolioModel');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index');
+router.get('/', async function(req, res, next) {
+  var portfolio = await portfolioModel.getPortfolio();
+  res.render('index',{
+    portfolio
+  });
 });
 
 router.post('/', async (req, res, next)=>{

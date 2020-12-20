@@ -1,1 +1,49 @@
-<h1>hola</h1>
+<div class="container-md p-4">
+    <h1 class="text-center">Administrador</h1>
+    <div class="row">
+        <div class="col text-right">
+            <p>Hola, {{usuario}}</p>
+        </div>
+        <div class="col-1 text-right">
+            <a href="/admin/login/logout" class="btn btn-sm btn-outline-dark">Salir</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-right">
+            <a href="/admin/portfolio/nuevo" class="btn btn-sm btn-outline-success">Nuevo</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>Proyectos</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Título</th>
+                        <th scope="col-2">Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each portfolio}}
+                    <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{imagen}}</td>
+                        <td>{{titulo}} </td>
+                        <td class="text-center">
+                            <a href="/admin/portfolio/editar/{{id}}" title="edit" class="btn btn-sm btn-outline-dark">Editar</a>
+                            <a href="/admin/portfolio/eliminar/{{id}}" title="delete"
+                                class="btn btn-sm btn-outline-dark">Borrar</a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

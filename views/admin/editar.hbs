@@ -1,0 +1,51 @@
+<main class="container-md p-4">
+    <h2 class="text-center">Editar Proyecto</h2>
+    <hr>
+    <form action="/admin/portfolio/editar" method="post" encType="multipart/form-data">
+        <input type="hidden" value="{{portfolio.id}}" name="id">
+        <div class="form-group">
+            <label for="fileimagen">Imagen</label>
+            <div class="input-group">
+                <div class="custom-file">
+                    <input name="imagen" type="file" class="custom-file-input" id="inputGroupFile04"
+                        aria-describedby="inputGroupFileAddon04" value="{{portfolio.imagen}}">
+                    <label class="custom-file-label" for="inputGroupFile04">Elegir imagen</label>
+                </div>
+            </div>
+             {{#if portfolio.imagen}}
+                <div>
+                    Current image: <img src="/images/portfolio/{{portfolio.imagen}}" width="80"
+                        style="display:block;" />
+                </div>
+                {{/if}}
+                <input type="hidden" name="image_old" value="{{portfolio.imagen}}" />
+        </div>
+        <div class="form-group">
+            <label for="titulo">Título</label>
+            <input type="text" class="form-control" id="titulo" name="titulo" value="{{portfolio.titulo}}">
+        </div>
+        <div class="form-group">
+            <label for="subtitulo">Subtítulo</label>
+            <input type="text" class="form-control" id="subtitulo" name="subtitulo" value="{{portfolio.subtitulo}}">
+        </div>
+        <div class="form-group">
+            <label for="Cuerpo">Cuerpo</label>
+            <textarea class="form-control" id="cuerpo" rows="3" name="cuerpo">{{{portfolio.cuerpo}}} </textarea>
+        </div>
+        <div class="form-group">
+            <label for="web">Web</label>
+            <input type="text" class="form-control" id="web" name="web" value="{{portfolio.web}}">
+        </div>
+        <div class="form-group">
+            <label for="github">Git Hub</label>
+            <input type="text" class="form-control" id="github" name="github" value="{{portfolio.github}}">
+        </div>
+        <button type="submit" class="btn btn-dark">Guardar</button>
+    </form>
+    {{#if error}}
+    <div class="alert alert-dark" role="alert">
+        {{mensaje}}
+    </div>
+    {{/if}}
+
+</main>
