@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 20-12-2020 a las 14:50:02
+-- Tiempo de generación: 21-12-2020 a las 14:54:38
 -- Versión del servidor: 5.7.31
 -- Versión de PHP: 7.3.21
 
@@ -58,7 +58,17 @@ CREATE TABLE IF NOT EXISTS `portfolio` (
   `web` varchar(250) NOT NULL,
   `github` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `portfolio`
+--
+
+INSERT INTO `portfolio` (`id`, `imagen`, `titulo`, `subtitulo`, `cuerpo`, `web`, `github`) VALUES
+(4, 'PBLTHX0.jpg', 'Website Proeycto 1', 'proyecto1', '<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>\r\n <p>HTML/CSS/JAVASCRIPT/NODE/MYSQL/BOOTSTRAP</p> ', 'https://github.com/iriquintero', 'https://github.com/iriquintero'),
+(5, 'PBLTHX0.jpg', 'Website Proyecto 2', 'proyecto 2', '<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>\r\n<p>HTML/CSS/JAVASCRIPT/NODEJS/MYSQL/BOOTSTRAP/REACT</p>', 'https://github.com/iriquintero', 'https://github.com/iriquintero'),
+(6, 'PBLTHX0.jpg', 'Website Proyecto 3', 'Proyecto 3', '<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>\r\n<p>HTML/CSS/JAVASCRIPT/NODEJS/MYSQL/BOOTSTRAP/REACT</p>', 'https://github.com/iriquintero', 'https://github.com/iriquintero'),
+(7, 'PBLTHX0.jpg', 'Website Proyecto 4', 'proyecto 4', '<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>\r\n<p>HTML/CSS/JAVASCRIPT/BOOTSTRAP/NODEJS/MYSQL/REACT</p>', 'https://github.com/iriquintero', 'https://github.com/iriquintero');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
